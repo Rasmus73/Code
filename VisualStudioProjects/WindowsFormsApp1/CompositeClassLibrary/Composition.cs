@@ -9,8 +9,7 @@ using System.Threading.Tasks;
 namespace CompositeClassLibrary
 {
     public class Composition : Component
-    {
-    //TESTING
+    {  
         //private List<Component> components;
         private Composite _composite;
 
