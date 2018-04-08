@@ -28,9 +28,10 @@ namespace WindowsFormsApp1
             //componentLine.Add(new ComponentText());
 
             compositeRoot.Add(componentLine);
-            compositeRoot.Add(new ComponentNewLine("line x"));
-            compositeRoot.Add(new ComponentText("text"));
             
+            compositeRoot.Add(new ComponentText("text"));
+            compositeRoot.Add(new ComponentNewLine("line x"));
+
             Composite composite2 = new Composite("composite2");
             ComponentNewLine componentLine2 = new ComponentNewLine("line2");
             composite2.Add(componentLine2);
@@ -46,6 +47,8 @@ namespace WindowsFormsApp1
             Composition composition = new Composition("composition", null);
 
             composition.Add(compositeRoot);
+
+            composition.Compose();
 
             composition.Draw(formGraphics);
 

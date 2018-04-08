@@ -36,11 +36,16 @@ namespace CompositeClassLibrary
             throw new NotImplementedException();
         }
 
-        private void Compose() // TODO: udskift med compositor
+        public void Compose() // TODO: udskift med compositor
         {
+            _composite.SortComponents();
 
-            
-
+            string tt = "";
+            foreach (Component component in _composite)
+            {
+                tt += component.Name;
+                System.Diagnostics.Debug.WriteLine(tt);
+            }            
         }
     }
 }

@@ -17,6 +17,8 @@ namespace CompositeClassLibrary.CompositePattern
         {
         }
 
+        #region Component
+
         public override void Add(Component component)
         {
             _children.Add(component);
@@ -48,8 +50,31 @@ namespace CompositeClassLibrary.CompositePattern
             }
         }
 
-        // ----------------------------------------------
+        //public override void Display(int depth)
+        //{
+        //    Console.WriteLine(new String('-', depth) + name);
 
+        //    // Recursively display child nodes
+
+        //    foreach (Component component in _children)
+        //    {
+        //        component.Display(depth + 2);
+        //    }
+        //}
+
+        #endregion
+
+        #region Composite
+
+        public void SortComponents()
+        {
+            _children.Sort((a, b) => { return (a.GetType().Name.CompareTo(b.GetType().Name)); });
+        }
+
+        #endregion
+
+
+        #region IEnumerable
         public IEnumerator<Component> GetEnumerator()
         {
             foreach (Component child in _children)
@@ -63,17 +88,7 @@ namespace CompositeClassLibrary.CompositePattern
             return GetEnumerator();
         }
 
+        #endregion
 
-        //public override void Display(int depth)
-        //{
-        //    Console.WriteLine(new String('-', depth) + name);
-
-        //    // Recursively display child nodes
-
-        //    foreach (Component component in _children)
-        //    {
-        //        component.Display(depth + 2);
-        //    }
-        //}
     }
 }
