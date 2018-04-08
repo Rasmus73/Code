@@ -1,0 +1,6 @@
+C:\Users\Rasmus\Documents\Visual Studio 2017\Projects\WindowsFormsApp1\ClassLibrary\bin\Debug\ClassLibrary.dll
+C:\Users\Rasmus\Documents\Visual Studio 2017\Projects\WindowsFormsApp1\ClassLibrary\bin\Debug\ClassLibrary.pdb
+C:\Users\Rasmus\Documents\Visual Studio 2017\Projects\WindowsFormsApp1\ClassLibrary\obj\Debug\Model.csprojResolveAssemblyReference.cache
+C:\Users\Rasmus\Documents\Visual Studio 2017\Projects\WindowsFormsApp1\ClassLibrary\obj\Debug\Model.csproj.CoreCompileInputs.cache
+C:\Users\Rasmus\Documents\Visual Studio 2017\Projects\WindowsFormsApp1\ClassLibrary\obj\Debug\ClassLibrary.dll
+C:\Users\Rasmus\Documents\Visual Studio 2017\Projects\WindowsFormsApp1\ClassLibrary\obj\Debug\ClassLibrary.pdb

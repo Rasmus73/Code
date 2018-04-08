@@ -1,0 +1,9 @@
+c:\Users\Rasmus\Documents\Visual Studio 2017\Projects\WindowsFormsApp1\ClassLibrary1\bin\Debug\ClassLibrary1.dll
+c:\Users\Rasmus\Documents\Visual Studio 2017\Projects\WindowsFormsApp1\ClassLibrary1\bin\Debug\ClassLibrary1.pdb
+c:\Users\Rasmus\Documents\Visual Studio 2017\Projects\WindowsFormsApp1\ClassLibrary1\bin\Debug\ClassLibrary.dll
+c:\Users\Rasmus\Documents\Visual Studio 2017\Projects\WindowsFormsApp1\ClassLibrary1\bin\Debug\ClassLibrary.pdb
+c:\Users\Rasmus\Documents\Visual Studio 2017\Projects\WindowsFormsApp1\ClassLibrary1\obj\Debug\CompositeClassLibrary.csproj.CoreCompileInputs.cache
+c:\Users\Rasmus\Documents\Visual Studio 2017\Projects\WindowsFormsApp1\ClassLibrary1\obj\Debug\CompositeClassLibrary.csproj.CopyComplete
+c:\Users\Rasmus\Documents\Visual Studio 2017\Projects\WindowsFormsApp1\ClassLibrary1\obj\Debug\ClassLibrary1.dll
+c:\Users\Rasmus\Documents\Visual Studio 2017\Projects\WindowsFormsApp1\ClassLibrary1\obj\Debug\ClassLibrary1.pdb
+C:\Users\Rasmus\documents\visual studio 2017\Projects\WindowsFormsApp1\ClassLibrary1\obj\Debug\CompositeClassLibrary.csprojResolveAssemblyReference.cache
