@@ -1,0 +1,70 @@
+package krabat.D3API;
+
+import java.io.IOException;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
+
+import krabat.Types.Hero;
+
+import android.util.Log;
+
+public class ServiceProxy implements IDownloadListener, IServiceProxy
+{ 	
+	private static final String NEWLINE = System.getProperty("line.separator").toString();
+	private static final String PATH = "api/d3/profile";
+	
+	
+	public String json = null;
+    private IDownloadListener downloadListener = null;
+    private String host;
+
+    public ServiceProxy(IDownloadListener downloadListener, String host)
+    {
+        this.downloadListener = downloadListener;
+        this.host = host;
+    }
+	 
+	private void AsyncServiceCall(String address) throws IOException
+	{		
+		Log.d("", "");
+		
+		URL url = new URL(address);
+	    DownloadTask dl = new DownloadTask(this);
+	    dl.execute(url);
+	    return;
+	}
+
+	@Override
+	public void OnDownloadCompleted(String json)
+	{	
+		Log.i(this.getClass().getName(), "json downloaded:" + NEWLINE + json);
+		this.json = json;		
+		downloadListener.OnDownloadCompleted(json);
+	}
+		
+	public List<Hero> GetHeros(String battletagName, int battletagCode)
+	{
+		//hero-id ::= <integer>
+		//url ::= <host> "/api/d3/profile/" <battletag-name> "-" <battletag-code> "/hero/" <hero-id>
+		//List<Hero> heros = new ArrayList<Hero>();
+
+		
+		String address = String.format("%s/%s/%s-%d/", host, PATH, battletagName, battletagCode);
+		
+		try
+		{
+			AsyncServiceCall(address);
+		}
+		catch (IOException e) 
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		String test = this.json;
+				
+		return null;
+	}
+	
+}

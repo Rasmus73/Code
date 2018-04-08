@@ -1,0 +1,8 @@
+c:\users\thomas\documents\visual studio 2015\Projects\Triangle\Triangle\bin\Debug\Triangle.dll
+c:\users\thomas\documents\visual studio 2015\Projects\Triangle\Triangle\bin\Debug\Triangle.pdb
+c:\users\thomas\documents\visual studio 2015\Projects\Triangle\Triangle\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+c:\users\thomas\documents\visual studio 2015\Projects\Triangle\Triangle\obj\Debug\Triangle.csprojResolveAssemblyReference.cache
+c:\users\thomas\documents\visual studio 2015\Projects\Triangle\Triangle\obj\Debug\Triangle.dll
+c:\users\thomas\documents\visual studio 2015\Projects\Triangle\Triangle\obj\Debug\Triangle.pdb
+c:\users\thomas\documents\visual studio 2015\Projects\Triangle\Triangle\bin\Debug\nunit.framework.dll
+c:\users\thomas\documents\visual studio 2015\Projects\Triangle\Triangle\bin\Debug\nunit.framework.xml

@@ -1,0 +1,6 @@
+c:\Users\Thomas\documents\visual studio 2015\Projects\Triangle\Triangle\bin\Debug\Triangle.dll
+c:\Users\Thomas\documents\visual studio 2015\Projects\Triangle\Triangle\bin\Debug\Triangle.pdb
+c:\Users\Thomas\documents\visual studio 2015\Projects\Triangle\Triangle\bin\Debug\nunit.framework.dll
+c:\Users\Thomas\documents\visual studio 2015\Projects\Triangle\Triangle\bin\Debug\nunit.framework.xml
+c:\Users\Thomas\documents\visual studio 2015\Projects\Triangle\Triangle\obj\Debug\Triangle.dll
+c:\Users\Thomas\documents\visual studio 2015\Projects\Triangle\Triangle\obj\Debug\Triangle.pdb

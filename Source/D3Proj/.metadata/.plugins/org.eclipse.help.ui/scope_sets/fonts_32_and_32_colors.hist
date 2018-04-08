@@ -1,0 +1,5 @@
+#Tue Apr 01 22:49:54 CEST 2014
+__DEFAULT__=false
+org.eclipse.sdk.Eclipse.master=true
+org.eclipse.help.ui.localSearch.master=true
+expression=fonts and colors
