@@ -79,11 +79,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ClassLibrary1\CompositeClassLibrary.csproj">
-      <Project>{A51CD0C5-40BF-4E45-BC98-70C34F0D9148}</Project>
+    <ProjectReference Include="..\CompositeClassLibrary\CompositeClassLibrary.csproj">
+      <Project>{a51cd0c5-40bf-4e45-bc98-70c34f0d9148}</Project>
       <Name>CompositeClassLibrary</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ClassLibrary\Model.csproj">
+    <ProjectReference Include="..\Model\Model.csproj">
       <Project>{905e616b-aed2-4ead-9c21-c2d27907e2c1}</Project>
       <Name>Model</Name>
     </ProjectReference>

@@ -7,3 +7,12 @@ c:\Users\Rasmus\Documents\Visual Studio 2017\Projects\WindowsFormsApp1\ClassLibr
 c:\Users\Rasmus\Documents\Visual Studio 2017\Projects\WindowsFormsApp1\ClassLibrary1\obj\Debug\ClassLibrary1.dll
 c:\Users\Rasmus\Documents\Visual Studio 2017\Projects\WindowsFormsApp1\ClassLibrary1\obj\Debug\ClassLibrary1.pdb
 C:\Users\Rasmus\documents\visual studio 2017\Projects\WindowsFormsApp1\ClassLibrary1\obj\Debug\CompositeClassLibrary.csprojResolveAssemblyReference.cache
+C:\Code\VisualStudioProjects\WindowsFormsApp1\CompositeClassLibrary\obj\Debug\CompositeClassLibrary.csprojResolveAssemblyReference.cache
+C:\Code\VisualStudioProjects\WindowsFormsApp1\CompositeClassLibrary\obj\Debug\CompositeClassLibrary.csproj.CoreCompileInputs.cache
+C:\Code\VisualStudioProjects\WindowsFormsApp1\CompositeClassLibrary\obj\Debug\ClassLibrary1.dll
+C:\Code\VisualStudioProjects\WindowsFormsApp1\CompositeClassLibrary\obj\Debug\ClassLibrary1.pdb
+C:\Code\VisualStudioProjects\WindowsFormsApp1\CompositeClassLibrary\bin\Debug\ClassLibrary1.dll
+C:\Code\VisualStudioProjects\WindowsFormsApp1\CompositeClassLibrary\bin\Debug\ClassLibrary1.pdb
+C:\Code\VisualStudioProjects\WindowsFormsApp1\CompositeClassLibrary\bin\Debug\ClassLibrary.dll
+C:\Code\VisualStudioProjects\WindowsFormsApp1\CompositeClassLibrary\bin\Debug\ClassLibrary.pdb
+C:\Code\VisualStudioProjects\WindowsFormsApp1\CompositeClassLibrary\obj\Debug\CompositeClassLibrary.csproj.CopyComplete
