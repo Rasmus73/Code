@@ -6,25 +6,13 @@ using System.Threading.Tasks;
 
 namespace CompositeClassLibrary.CompositePattern
 {
-    public abstract class Component
+    public interface IComponent
     {
-        //private readonly string _name;
-        //public string Name => _name;
+        string Name { get; set; }
 
-        // Draw Coordinate? ellers start med at prøve at lave ComponentInterval og se...
-
-        public string Name { get; }
-
-        public Component(string name)
-        {
-            Name = name;
-        }
-
-        public abstract void Add(Component component);
-        public abstract void Remove(Component component);
-//        public abstract Component GetChild();
-        public abstract void Draw(System.Drawing.Graphics graphics);
-        //public abstract void Draw(System.Drawing.Graphics graphics, int x, int y); ????
-        //public abstract void Display(int depth);
+        void Add(IComponent component);
+        void Remove(IComponent component);
+        IComponent GetChild(int index);
+        void Draw(System.Drawing.Graphics graphics);
     }
 }

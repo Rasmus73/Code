@@ -8,30 +8,37 @@ using System.Threading.Tasks;
 
 namespace CompositeClassLibrary
 {
-    public class Composition : Component
-    {  
+    public class Composition : IComponent
+    {
+        public string Name { get; set; }
+
         //private List<Component> components;
         private Composite _composite;
 
         public Composition(string name, Compositor compositor) 
-            : base(name)
         {
-            //components = new List<Component>();
+            _composite = new Composite(name);
+            Name = name;
         }
 
-        public override void Add(Component component)
+        public void Add(IComponent component)
         {
-            //components.Add(component);
-            _composite = (Composite)component;
+            _composite.Add(component);
+            //_composite = (Composite)component;
         }
 
-        public override void Draw(Graphics graphics)
+        public void Draw(Graphics graphics)
         {
             //components.ForEach(a => a.Draw(graphics));
             _composite.Draw(graphics);
         }
 
-        public override void Remove(Component component)
+        public void Remove(IComponent component)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IComponent GetChild(int index)
         {
             throw new NotImplementedException();
         }
@@ -41,11 +48,22 @@ namespace CompositeClassLibrary
             _composite.SortComponents();
 
             string tt = "";
-            foreach (Component component in _composite)
+            foreach (IComponent component in _composite)
             {
                 tt += component.Name;
                 System.Diagnostics.Debug.WriteLine(tt);
-            }            
+            }
+
+            for(int ix = 0; ix < _composite.Count(); ix++)
+            {
+                IComponent component = _composite.GetChild(ix);
+                IComponent nextComponent = _composite.GetChild(ix + 1);
+                if (component.GetType() != nextComponent.GetType())
+                {
+                    _composite.Add(new ComponentNewLine("Newline"));
+                }
+
+            }
         }
     }
 }

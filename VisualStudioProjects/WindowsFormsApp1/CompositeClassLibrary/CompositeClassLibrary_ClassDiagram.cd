@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CompositeClassLibrary.CompositePattern.ComponentAbsence" Collapsed="true">
+    <Position X="5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAgAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CompositePattern\ComponentAbsence.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CompositeClassLibrary.CompositePattern.ComponentContactGroup" Collapsed="true">
+    <Position X="11.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAgAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CompositePattern\ComponentContactGroup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CompositeClassLibrary.CompositePattern.ComponentInterval" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAgAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CompositePattern\ComponentInterval.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CompositeClassLibrary.CompositePattern.ComponentNewLine" Collapsed="true">
+    <Position X="7.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAgAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CompositePattern\ComponentNewLine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CompositeClassLibrary.CompositePattern.ComponentText" Collapsed="true">
+    <Position X="14" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAgAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CompositePattern\ComponentText.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CompositeClassLibrary.CompositePattern.Composite" Collapsed="true">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIQAAAAAAABAhAAAAAABAAAAAAAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>CompositePattern\Composite.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CompositeClassLibrary.Composition" Collapsed="true">
+    <Position X="9.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAEAAAAgAAAAAABAAAABAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Composition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CompositeClassLibrary.Compositor" Collapsed="true">
+    <Position X="16.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Compositor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CompositeClassLibrary.CompositePattern.Component" Collapsed="true">
+    <Position X="7.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAgAAAAAABAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CompositePattern\Component.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

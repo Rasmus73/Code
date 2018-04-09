@@ -8,33 +8,35 @@ using System.Threading.Tasks;
 
 namespace CompositeClassLibrary.CompositePattern
 {
-    public class Composite : Component, IEnumerable<Component>
+    internal class Composite : IComponent, IEnumerable<IComponent>
     {
-        private List<Component> _children = new List<Component>();
+        public string Name { get; set; }
+
+        private List<IComponent> _children = new List<IComponent>();
 
         public Composite(string name)
-          : base(name)
         {
+            Name = name;
         }
 
         #region Component
 
-        public override void Add(Component component)
+        public void Add(IComponent component)
         {
             _children.Add(component);
         }
 
-        public override void Remove(Component component)
+        public void Remove(IComponent component)
         {
             _children.Remove(component);
         }
 
-        //public override Component GetChild()
-        //{
-        //    throw new NotImplementedException();
-        //}
+        public IComponent GetChild(int index)
+        {
+            return _children[index];
+        }
 
-        public override void Draw(Graphics graphics)
+        public void Draw(Graphics graphics)
         {
 
             System.Drawing.Pen myPen;
@@ -44,7 +46,7 @@ namespace CompositeClassLibrary.CompositePattern
             System.Drawing.Font font = new Font("TimesNewRoman", 12);
             graphics.DrawString(Name, font, new SolidBrush(Color.Black), 1, 1);
 
-            foreach (Component component in _children)
+            foreach (IComponent component in _children)
             {
                 component.Draw(graphics);
             }
@@ -75,9 +77,9 @@ namespace CompositeClassLibrary.CompositePattern
 
 
         #region IEnumerable
-        public IEnumerator<Component> GetEnumerator()
+        public IEnumerator<IComponent> GetEnumerator()
         {
-            foreach (Component child in _children)
+            foreach (IComponent child in _children)
             {
                 yield return child;
             }
@@ -89,6 +91,5 @@ namespace CompositeClassLibrary.CompositePattern
         }
 
         #endregion
-
     }
 }

@@ -45,7 +45,6 @@
     <Compile Include="CompositePattern\ComponentContactGroup.cs" />
     <Compile Include="CompositePattern\ComponentInterval.cs" />
     <Compile Include="CompositePattern\Composite.cs" />
-    <Compile Include="CompositePattern\ComponentText.cs" />
     <Compile Include="CompositePattern\ComponentNewLine.cs" />
     <Compile Include="CompositePattern\Component.cs" />
     <Compile Include="Compositor.cs" />
@@ -57,6 +56,9 @@
       <Project>{905e616b-aed2-4ead-9c21-c2d27907e2c1}</Project>
       <Name>Model</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CompositeClassLibrary_ClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

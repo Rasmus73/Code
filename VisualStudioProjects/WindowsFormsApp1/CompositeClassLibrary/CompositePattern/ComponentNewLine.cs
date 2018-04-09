@@ -7,24 +7,31 @@ using System.Threading.Tasks;
 
 namespace CompositeClassLibrary.CompositePattern
 {
-    public class ComponentNewLine : Component
+    internal class ComponentNewLine : IComponent
     {
-        public ComponentNewLine(string name) : 
-            base(name)
+        public string Name { get; set; }
+
+        public ComponentNewLine(string name)
         {
+            Name = name;
         }
 
-        public override void Add(Component component)
-        {
-            throw new NotImplementedException();
-        }
-
-        public override void Remove(Component component)
+        public void Add(IComponent component)
         {
             throw new NotImplementedException();
         }
 
-        public override void Draw(Graphics graphics)
+        public void Remove(IComponent component)
+        {
+            throw new NotImplementedException();
+        }
+
+        public IComponent GetChild(int index)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Draw(Graphics graphics)
         {
             System.Drawing.Font font = new Font("TimesNewRoman", 8);
             graphics.DrawString(Name, font, new SolidBrush(Color.Black), 1, 20);

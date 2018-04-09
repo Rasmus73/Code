@@ -21,24 +21,22 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var compositeRoot = new Composite("composite1");
+            //var compositeRoot = new Composite("composite1");
 
-            ComponentNewLine componentLine = new ComponentNewLine("line");
-            //componentLine.Add(new ComponentText());
-            //componentLine.Add(new ComponentText());
+            //compositeRoot.Add(new ComponentContactGroup("CG_C", null));
+            //compositeRoot.Add(new ComponentAbsence("Abs1", null));
+            //compositeRoot.Add(new ComponentContactGroup("CG_A", null));
+            //compositeRoot.Add(new ComponentAbsence("Abs2", null));
+            //compositeRoot.Add(new ComponentContactGroup("CG_B", null));
 
-            compositeRoot.Add(componentLine);
-            
-            compositeRoot.Add(new ComponentText("text"));
-            compositeRoot.Add(new ComponentNewLine("line x"));
+            //Composite composite2 = new Composite("composite2");
+            //composite2.Add(new ComponentInterval("Interval", null));
 
-            Composite composite2 = new Composite("composite2");
-            ComponentNewLine componentLine2 = new ComponentNewLine("line2");
-            composite2.Add(componentLine2);
+            //composite2.Add(new ComponentContactGroup("CG_A", null));
+            //composite2.Add(new ComponentAbsence("Abs2", null));
+            //composite2.Add(new ComponentContactGroup("CG_B", null));
 
-            composite2.Add(new ComponentInterval("Interval", null));
-
-            compositeRoot.Add(composite2);
+            //compositeRoot.Add(composite2);
 
             Graphics formGraphics = this.CreateGraphics();
             formGraphics.Clear(Color.BlueViolet);
@@ -46,7 +44,19 @@ namespace WindowsFormsApp1
             //compositeRoot.Draw(formGraphics);
             Composition composition = new Composition("composition", null);
 
-            composition.Add(compositeRoot);
+            composition.Add(new ComponentContactGroup("CG_C", null));
+            composition.Add(new ComponentAbsence("Abs1", null));
+            composition.Add(new ComponentContactGroup("CG_A", null));
+            composition.Add(new ComponentAbsence("Abs2", null));
+            composition.Add(new ComponentContactGroup("CG_B", null));
+
+            composition.Add(new ComponentInterval("Interval", null));
+
+            composition.Add(new ComponentContactGroup("CG_A", null));
+            composition.Add(new ComponentAbsence("Abs2", null));
+            composition.Add(new ComponentContactGroup("CG_B", null));
+
+            //composition.Add(compositeRoot);
 
             composition.Compose();
 
