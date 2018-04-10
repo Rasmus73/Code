@@ -57,15 +57,15 @@ namespace WindowsFormsApplication1
 
             formGraphics.Clear(Color.AliceBlue);
 
-            //var ll = myPage.GetIntervals();
+            var ll = myPage.GetIntervals();
 
-            //int y = 100;
-            //foreach (var l in ll)
-            //{
-            //    formGraphics.DrawLine(myPen, l.StartX, y, l.EndX, y);
-            //    formGraphics.DrawString(l.Comment, DefaultFont, new SolidBrush(Color.Black), l.StartX, y);
-            //    y += 100;
-            //}
+            int y = 100;
+            foreach (var l in ll)
+            {
+                formGraphics.DrawLine(myPen, l.StartX, y, l.EndX, y);
+                formGraphics.DrawString(l.Comment, DefaultFont, new SolidBrush(Color.Black), l.StartX, y);
+                y += 100;
+            }
 
             myPen.Dispose();
             formGraphics.Dispose();
