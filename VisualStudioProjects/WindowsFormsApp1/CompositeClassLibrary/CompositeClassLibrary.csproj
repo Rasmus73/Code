@@ -45,10 +45,11 @@
     <Compile Include="CompositePattern\ComponentContactGroup.cs" />
     <Compile Include="CompositePattern\ComponentInterval.cs" />
     <Compile Include="CompositePattern\Composite.cs" />
-    <Compile Include="CompositePattern\ComponentNewLine.cs" />
+    <Compile Include="CompositePattern\ComponentLine.cs" />
     <Compile Include="CompositePattern\Component.cs" />
     <Compile Include="Compositor.cs" />
-    <Compile Include="Composition.cs" />
+    <Compile Include="Composition\Composition.cs" />
+    <Compile Include="Composition\IComposition.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

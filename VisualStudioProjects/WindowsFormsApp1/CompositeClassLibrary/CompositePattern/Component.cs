@@ -10,7 +10,7 @@ namespace CompositeClassLibrary.CompositePattern
     {
         string Name { get; set; }
 
-        void Add(IComponent component);
+        void Insert(IComponent component, int index = -1);
         void Remove(IComponent component);
         IComponent GetChild(int index);
         void Draw(System.Drawing.Graphics graphics);

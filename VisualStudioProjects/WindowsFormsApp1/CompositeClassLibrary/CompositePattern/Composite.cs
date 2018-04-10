@@ -19,11 +19,27 @@ namespace CompositeClassLibrary.CompositePattern
             Name = name;
         }
 
-        #region Component
+        #region Composite
 
-        public void Add(IComponent component)
+        public void SortComponents()
         {
-            _children.Add(component);
+            _children.Sort((a, b) => { return (a.GetType().Name.CompareTo(b.GetType().Name)); });
+        }
+
+        #endregion
+
+        #region IComponent
+
+        public void Insert(IComponent component, int index = -1)
+        {
+            if(index == -1)
+            {
+                _children.Add(component);
+            }
+            else
+            {
+                _children.Insert(index, component);
+            }
         }
 
         public void Remove(IComponent component)
@@ -63,15 +79,6 @@ namespace CompositeClassLibrary.CompositePattern
         //        component.Display(depth + 2);
         //    }
         //}
-
-        #endregion
-
-        #region Composite
-
-        public void SortComponents()
-        {
-            _children.Sort((a, b) => { return (a.GetType().Name.CompareTo(b.GetType().Name)); });
-        }
 
         #endregion
 

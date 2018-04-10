@@ -17,7 +17,7 @@ namespace CompositeClassLibrary.CompositePattern
             Name = name;
         }
 
-        public void Add(IComponent component)
+        public void Insert(IComponent component, int index)
         {
             throw new NotImplementedException();
         }

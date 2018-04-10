@@ -49,16 +49,16 @@ namespace WindowsFormsApp1
             composition.Add(new ComponentContactGroup("CG_A", null));
             composition.Add(new ComponentAbsence("Abs2", null));
             composition.Add(new ComponentContactGroup("CG_B", null));
-
+                        
             composition.Add(new ComponentInterval("Interval", null));
-
+                        
             composition.Add(new ComponentContactGroup("CG_A", null));
             composition.Add(new ComponentAbsence("Abs2", null));
             composition.Add(new ComponentContactGroup("CG_B", null));
 
             //composition.Add(compositeRoot);
 
-            composition.Compose();
+            composition.Compositor_Compose();
 
             composition.Draw(formGraphics);
 
