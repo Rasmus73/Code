@@ -8,16 +8,17 @@ using Model.ValueTypes;
 
 namespace CompositeClassLibrary.CompositePattern
 {
-    public class ComponentInterval : IComponent
+    public class ComponentInterval : IntervalComponent, IComponent
     {
         public string Name { get; set; }
 
         public ComponentInterval(string name, Interval interval)
+            : base(interval)
         {
             Name = name;
         }
 
-        public void Insert(IComponent component, int index)
+        public void Add(IComponent component)
         {
             throw new NotImplementedException();
         }
@@ -27,15 +28,10 @@ namespace CompositeClassLibrary.CompositePattern
             throw new NotImplementedException();
         }
 
-        public IComponent GetChild(int index)
-        {
-            throw new NotImplementedException();
-        }
-
         public void Draw(Graphics graphics)
         {
             System.Drawing.Font font = new Font("TimesNewRoman", 8);
-            graphics.DrawString(Name, font, new SolidBrush(Color.Black), 1, 40);
+            graphics.DrawString(Name, font, new SolidBrush(Color.Black), 1, 80);
         }
     }
 }

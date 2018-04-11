@@ -32,10 +32,10 @@ namespace ClassLibrary
         }
 
 
-        public int resolutionUnit(int ticks)
-        {
-            return ticks / Width;
-        }
+        //public int resolutionUnit(int ticks)
+        //{
+        //    return ticks / Width;
+        //}
 
         public void AddInterval(DateTime start, DateTime end, string comment)
         {

@@ -9,11 +9,12 @@ namespace Model.ValueTypes
 {
     public class Interval
     {
-        public DateTime StartDate { get; }
-        public DateTime EndDate { get; }
+        public DateTime StartDateTime { get; }
+        public DateTime? EndDateTime { get; }
         public string Comment { get; }
-        //public long StartX { get; set; }
-        //public long EndX { get; set; }
+        // 
+        public long StartX { get; set; }
+        public long EndX { get; set; }
 
         public Interval(DateTime startDateTime, DateTime? endDateTime, string comment)
         {
@@ -21,6 +22,9 @@ namespace Model.ValueTypes
             {
                 throw new ArgumentException("StartDateTime > EndDateTime is not allowed.");
             }
+
+            StartDateTime = startDateTime;
+            EndDateTime = endDateTime;
         }
     }
 }

@@ -4,17 +4,15 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Model.ValueTypes;
 
 namespace CompositeClassLibrary.CompositePattern
 {
-    public class ComponentContactGroup : IntervalComponent, IComponent
+    public class ComponentText : IComponent
     {
         public string Name { get; set; }
 
-        public ComponentContactGroup(string name, Interval interval)
-            : base(interval)
-        {            
+        public ComponentText(string name)
+        {
             Name = name;
         }
 
@@ -26,12 +24,13 @@ namespace CompositeClassLibrary.CompositePattern
         public void Remove(IComponent component)
         {
             throw new NotImplementedException();
-        }    
+        }
 
         public void Draw(Graphics graphics)
         {
             System.Drawing.Font font = new Font("TimesNewRoman", 8);
-            graphics.DrawString(Name, font, new SolidBrush(Color.Black), 1, 60);
+            graphics.DrawString(Name, font, new SolidBrush(Color.Black), 1, 20);
         }
+
     }
 }

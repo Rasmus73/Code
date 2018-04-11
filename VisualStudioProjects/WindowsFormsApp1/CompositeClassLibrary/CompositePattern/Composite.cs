@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CompositeClassLibrary.CompositePattern
 {
-    internal class Composite : IComponent, IEnumerable<IComponent>
+    internal class Composite : IComponent, IComposite, IEnumerable<IComponent>
     {
         public string Name { get; set; }
 
@@ -26,37 +26,46 @@ namespace CompositeClassLibrary.CompositePattern
             _children.Sort((a, b) => { return (a.GetType().Name.CompareTo(b.GetType().Name)); });
         }
 
+        //private void CalculatePosition(int width, int resolutionInPixels)
+        //{
+
+        //}
+
         #endregion
 
         #region IComponent
-
-        public void Insert(IComponent component, int index = -1)
+        public void Add(IComponent component)
         {
-            if(index == -1)
-            {
-                _children.Add(component);
-            }
-            else
-            {
-                _children.Insert(index, component);
-            }
+            _children.Add(component);
         }
+
+        //public void Insert(IComponent component, int index = -1)
+        //{
+        //    if(index == -1)
+        //    {
+        //        _children.Add(component);
+        //    }
+        //    else
+        //    {
+        //        _children.Insert(index, component);
+        //    }
+        //}
 
         public void Remove(IComponent component)
         {
-            _children.Remove(component);
+            //_children.Remove(component);
+            _children.Clear();
         }
 
-        public IComponent GetChild(int index)
-        {
-            return _children[index];
-        }
+        //public IComponent GetChild(int index)
+        //{
+        //    return _children[index];
+        //}
 
         public void Draw(Graphics graphics)
         {
-
-            System.Drawing.Pen myPen;
-            myPen = new System.Drawing.Pen(System.Drawing.Color.Black);
+            Pen myPen;
+            myPen = new Pen(Color.Black);
 
             //graphics.DrawLine(myPen, 1, ,, l.EndX, y);
             System.Drawing.Font font = new Font("TimesNewRoman", 12);
@@ -64,6 +73,11 @@ namespace CompositeClassLibrary.CompositePattern
 
             foreach (IComponent component in _children)
             {
+                if(component is IComposite)
+                {
+                    ((IComposite)component).CalculatePosition(0,0);
+                }                
+
                 component.Draw(graphics);
             }
         }
@@ -83,6 +97,23 @@ namespace CompositeClassLibrary.CompositePattern
         #endregion
 
 
+        #region IComposite
+        public DateTime GetMaxDateTime()
+        {
+            throw new NotImplementedException();
+        }
+
+        public DateTime GetMinDateTime()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void CalculatePosition(int width, int resolutionInPixels)
+        {
+            var dd = _children[0];
+        }
+        #endregion
+
         #region IEnumerable
         public IEnumerator<IComponent> GetEnumerator()
         {
@@ -98,5 +129,6 @@ namespace CompositeClassLibrary.CompositePattern
         }
 
         #endregion
+
     }
 }

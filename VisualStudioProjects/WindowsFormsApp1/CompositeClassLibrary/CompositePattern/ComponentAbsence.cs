@@ -8,16 +8,17 @@ using Model.ValueTypes;
 
 namespace CompositeClassLibrary.CompositePattern
 {
-    public class ComponentAbsence : IComponent
+    public class ComponentAbsence : IntervalComponent, IComponent
     {
         public string Name { get; set; }
 
-        public ComponentAbsence(string name, Interval interval)
+        public ComponentAbsence(string name, Interval interval)            
+            : base(interval)
         {
             Name = name;
         }
 
-        public void Insert(IComponent component, int index)
+        public void Add(IComponent component)
         {
             throw new NotImplementedException();
         }
@@ -27,13 +28,10 @@ namespace CompositeClassLibrary.CompositePattern
             throw new NotImplementedException();
         }
 
-        public IComponent GetChild(int index)
-        {
-            throw new NotImplementedException();
-        }
-
+        //public void Draw(Graphics graphics, DateTime minDateTime, DateTime maxDateTime) -- x beregning her eller i compositor (også y)???????
         public void Draw(Graphics graphics)
-        {
+        {            
+
             System.Drawing.Font font = new Font("TimesNewRoman", 8);
             graphics.DrawString(Name, font, new SolidBrush(Color.Black), 1, 40);
         }
