@@ -10,6 +10,6 @@ namespace CompositeClassLibrary.CompositePattern
 {
     internal interface IIntervalComponent
     {
-       Interval Interval { get; }
+        IntervalType Interval { get; }
     }
 }

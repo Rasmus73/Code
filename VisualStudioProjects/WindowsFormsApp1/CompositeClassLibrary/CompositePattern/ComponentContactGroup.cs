@@ -12,7 +12,7 @@ namespace CompositeClassLibrary.CompositePattern
     {
         public string Name { get; set; }
 
-        public ComponentContactGroup(string name, Interval interval)
+        public ComponentContactGroup(string name, IntervalType interval)
             : base(interval)
         {            
             Name = name;
@@ -30,8 +30,23 @@ namespace CompositeClassLibrary.CompositePattern
 
         public void Draw(Graphics graphics)
         {
-            System.Drawing.Font font = new Font("TimesNewRoman", 8);
-            graphics.DrawString(Name, font, new SolidBrush(Color.Black), 1, 60);
+
+            long y = base.Interval.Y;
+            Pen myPen;
+            myPen = new Pen(Color.Black);
+            graphics.DrawLine(myPen, base.Interval.XStart, y, base.Interval.XEnd, y);
+
+            graphics.DrawLine(myPen, base.Interval.XStart, y-5, base.Interval.XStart, y+5);
+            graphics.DrawLine(myPen, base.Interval.XEnd, y-5, base.Interval.XEnd, y+5);
+
+
+            Font font = new Font("TimesNewRoman", 8);
+            //graphics.DrawString(Name, font, new SolidBrush(Color.Black), base.Interval.XEnd - base.Interval.XStart, y);
+            graphics.DrawString(Name, font, new SolidBrush(Color.Black), base.Interval.XStart, y);
+
+            graphics.DrawString(base.Interval.StartDateTime.ToString(), font, new SolidBrush(Color.Black), base.Interval.XStart, y-20);
+            graphics.DrawString(base.Interval.EndDateTime.ToString(), font, new SolidBrush(Color.Black), base.Interval.XEnd, y-20);
+
         }
     }
 }

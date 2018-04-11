@@ -1,5 +1,6 @@
 ﻿using CompositeClassLibrary;
 using CompositeClassLibrary.CompositePattern;
+using CompositeClassLibrary.CompositorPattern;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -7,7 +8,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using Model.ValueTypes;
 using System.Windows.Forms;
 
 namespace WindowsFormsApp1
@@ -41,27 +42,27 @@ namespace WindowsFormsApp1
             Graphics formGraphics = this.CreateGraphics();
             formGraphics.Clear(Color.BlueViolet);
 
-            //compositeRoot.Draw(formGraphics);
-            Composition composition = new Composition("composition", compositor: null);
 
+            CompositorFixedWidth compositor = new CompositorFixedWidth(this.Width-20);
+            Composition composition = new Composition(compositor);
 
             composition.Add(new ComponentText("TEXT_1"));
 
-            composition.Add(new ComponentContactGroup("CG_C", new Model.ValueTypes.Interval(DateTime.Now.AddDays(-10), DateTime.Now.AddDays(10), "TEST_COMMENT")));
-            composition.Add(new ComponentAbsence("Abs1", new Model.ValueTypes.Interval(DateTime.Now.AddDays(-13), DateTime.Now.AddDays(8), "TEST_COMMENT")));
-            composition.Add(new ComponentContactGroup("CG_A1", new Model.ValueTypes.Interval(DateTime.Now.AddDays(-130), DateTime.Now.AddDays(80), "TEST_COMMENT")));
-            //composition.Add(new ComponentAbsence("Abs2", null));
-            //composition.Add(new ComponentContactGroup("CG_B", null));
+            composition.Add(new ComponentContactGroup("CG_A", new IntervalType(DateTime.Now.AddDays(-10), DateTime.Now.AddDays(10), "TEST_COMMENT")));
+            composition.Add(new ComponentAbsence("Abs1", new IntervalType(DateTime.Now.AddDays(-13), DateTime.Now.AddDays(8), "TEST_COMMENT")));
+            composition.Add(new ComponentContactGroup("CG_A1", new IntervalType(DateTime.Now.AddDays(-130), DateTime.Now.AddDays(80), "TEST_COMMENT")));
+            composition.Add(new ComponentAbsence("Abs2", new IntervalType(DateTime.Now.AddDays(-10), DateTime.Now.AddDays(10), "TEST_COMMENT")));
+            composition.Add(new ComponentContactGroup("CG_B", new IntervalType(DateTime.Now.AddDays(-10), DateTime.Now.AddDays(10), "TEST_COMMENT")));
                         
-            composition.Add(new ComponentInterval("Interval", new Model.ValueTypes.Interval(DateTime.Now.AddDays(-12), DateTime.Now.AddDays(120), "TEST_COMMENT")));
+            composition.Add(new ComponentInterval("Interval", new IntervalType(DateTime.Now.AddDays(-12), DateTime.Now.AddDays(120), "TEST_COMMENT")));
                         
-            composition.Add(new ComponentContactGroup("CG_A", new Model.ValueTypes.Interval(DateTime.Now.AddDays(-12), DateTime.Now.AddDays(120), "TEST_COMMENT")));
-            //composition.Add(new ComponentAbsence("Abs2", null));
-            //composition.Add(new ComponentContactGroup("CG_B", null));
+            composition.Add(new ComponentContactGroup("CG_A2", new IntervalType(DateTime.Now.AddDays(-12), DateTime.Now.AddDays(120), "TEST_COMMENT")));
+            composition.Add(new ComponentAbsence("Abs2", new IntervalType(DateTime.Now.AddDays(-10), DateTime.Now.AddDays(10), "TEST_COMMENT")));
+            composition.Add(new ComponentContactGroup("CG_C", new IntervalType(DateTime.Now.AddDays(-10), DateTime.Now.AddDays(10), "TEST_COMMENT")));
 
             //composition.Add(compositeRoot);
 
-            composition.Compositor_Compose(this.Width);
+            //composition.Compositor_Compose(this.Width);
 
             composition.Draw(formGraphics);
 

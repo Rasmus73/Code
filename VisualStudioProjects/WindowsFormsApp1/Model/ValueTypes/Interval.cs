@@ -7,16 +7,17 @@ using System.Threading.Tasks;
 
 namespace Model.ValueTypes
 {
-    public class Interval
+    public class IntervalType
     {
         public DateTime StartDateTime { get; }
         public DateTime? EndDateTime { get; }
         public string Comment { get; }
         // 
-        public long StartX { get; set; }
-        public long EndX { get; set; }
+        public long XStart { get; set; }
+        public long XEnd { get; set; }
+        public long Y { get; set; }
 
-        public Interval(DateTime startDateTime, DateTime? endDateTime, string comment)
+        public IntervalType(DateTime startDateTime, DateTime? endDateTime, string comment)
         {
             if (endDateTime.HasValue && startDateTime > endDateTime.Value)
             {

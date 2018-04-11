@@ -12,7 +12,7 @@ namespace CompositeClassLibrary.CompositePattern
     {
         public string Name { get; set; }
 
-        public ComponentInterval(string name, Interval interval)
+        public ComponentInterval(string name, IntervalType interval)
             : base(interval)
         {
             Name = name;

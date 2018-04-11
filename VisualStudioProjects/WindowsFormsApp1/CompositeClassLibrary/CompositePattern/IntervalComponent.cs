@@ -10,9 +10,9 @@ namespace CompositeClassLibrary.CompositePattern
 {
     public abstract class IntervalComponent : IIntervalComponent
     {
-        public Interval Interval { get; }
+        public IntervalType Interval { get; }
 
-        public IntervalComponent(Interval interval)
+        public IntervalComponent(IntervalType interval)
         {
             if (interval == null) throw new ArgumentNullException(nameof(interval));
 

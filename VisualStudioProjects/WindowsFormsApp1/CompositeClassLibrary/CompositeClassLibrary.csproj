@@ -50,7 +50,9 @@
     <Compile Include="CompositePattern\Composite.cs" />
     <Compile Include="CompositePattern\ComponentText.cs" />
     <Compile Include="CompositePattern\IComponent.cs" />
-    <Compile Include="Compositor.cs" />
+    <Compile Include="CompositorPattern\PositionCalculation.cs" />
+    <Compile Include="CompositorPattern\CompositorFixedWidth.cs" />
+    <Compile Include="CompositorPattern\Compositor.cs" />
     <Compile Include="Composition\Composition.cs" />
     <Compile Include="Composition\IComposition.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

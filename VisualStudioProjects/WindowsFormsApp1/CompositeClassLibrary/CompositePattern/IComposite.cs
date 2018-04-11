@@ -15,6 +15,8 @@ namespace CompositeClassLibrary.CompositePattern
 
 
         void CalculatePosition(int width, int resolutionInPixels);
+
+        void Clear();
     }   
 
 }

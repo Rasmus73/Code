@@ -12,7 +12,7 @@ namespace CompositeClassLibrary.CompositePattern
     {
         public string Name { get; set; }
 
-        public ComponentAbsence(string name, Interval interval)            
+        public ComponentAbsence(string name, IntervalType interval)            
             : base(interval)
         {
             Name = name;

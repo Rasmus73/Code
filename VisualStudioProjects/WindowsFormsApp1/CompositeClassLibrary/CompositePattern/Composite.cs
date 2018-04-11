@@ -21,9 +21,14 @@ namespace CompositeClassLibrary.CompositePattern
 
         #region Composite
 
-        public void SortComponents()
+        public void SortComponentsByType()
         {
             _children.Sort((a, b) => { return (a.GetType().Name.CompareTo(b.GetType().Name)); });
+            //_children.Sort((a, b) => {
+            //    if(a is IIntervalComponent)
+
+            //    return 1;
+            //});
         }
 
         //private void CalculatePosition(int width, int resolutionInPixels)
@@ -98,6 +103,12 @@ namespace CompositeClassLibrary.CompositePattern
 
 
         #region IComposite
+
+        public void Clear()
+        {
+            _children.Clear(); // TODO: loop nested composites.... ?!
+        }
+
         public DateTime GetMaxDateTime()
         {
             throw new NotImplementedException();
