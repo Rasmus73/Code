@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApp1
+﻿namespace WindowsFormsDisplayIntervalsDemo
 {
     partial class FormMain
     {

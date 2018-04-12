@@ -79,7 +79,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CompositeClassLibrary\IntervalDisplayLibrary.csproj">
+    <ProjectReference Include="..\IntervalDisplayLibrary\IntervalDisplayLibrary.csproj">
       <Project>{a51cd0c5-40bf-4e45-bc98-70c34f0d9148}</Project>
       <Name>IntervalDisplayLibrary</Name>
     </ProjectReference>
