@@ -1,17 +1,12 @@
 ﻿using CompositeClassLibrary.CompositePattern;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CompositeClassLibrary.CompositorPattern
 {
-    public class CompositorFixedWidth : Compositor
+    public class CompositorSeparateLine : Compositor
     {
         private int _width;
 
-        public CompositorFixedWidth(int displayWidth)
+        public CompositorSeparateLine(int displayWidth)
         {
             _width = displayWidth;
         }
@@ -54,7 +49,7 @@ namespace CompositeClassLibrary.CompositorPattern
 
             composedRoot.Add(currentLine);
 
-            composite.Clear(); // TODO: Dont like this... refactor/change method.
+            composite.Clear(); // TODO: I do not like this... refactor/change method.
             composite.Name = composedRoot.Name;
             foreach (var i in composedRoot)
             {

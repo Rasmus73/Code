@@ -1,16 +1,15 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CompositeClassLibrary.CompositePattern
 {
     internal class Composite : IComponent, IComposite, IEnumerable<IComponent>
     {
+        #region Composite
+
         public string Name { get; set; }
+        public long YCoord { get; set; }
 
         private List<IComponent> _children = new List<IComponent>();
 
@@ -18,8 +17,6 @@ namespace CompositeClassLibrary.CompositePattern
         {
             Name = name;
         }
-
-        #region Composite
 
         public void SortComponentsByType()
         {
@@ -30,11 +27,6 @@ namespace CompositeClassLibrary.CompositePattern
             //    return 1;
             //});
         }
-
-        //private void CalculatePosition(int width, int resolutionInPixels)
-        //{
-
-        //}
 
         #endregion
 
@@ -56,48 +48,24 @@ namespace CompositeClassLibrary.CompositePattern
         //    }
         //}
 
-        public void Remove(IComponent component)
-        {
-            //_children.Remove(component);
-            _children.Clear();
-        }
-
-        //public IComponent GetChild(int index)
-        //{
-        //    return _children[index];
-        //}
-
         public void Draw(Graphics graphics)
         {
             Pen myPen;
             myPen = new Pen(Color.Black);
 
-            //graphics.DrawLine(myPen, 1, ,, l.EndX, y);
-            System.Drawing.Font font = new Font("TimesNewRoman", 12);
-            graphics.DrawString(Name, font, new SolidBrush(Color.Black), 1, 1);
+            Font font = new Font("TimesNewRoman", 8);
+            graphics.DrawString(Name, font, new SolidBrush(Color.Red), 1, YCoord);
 
             foreach (IComponent component in _children)
             {
-                if(component is IComposite)
-                {
-                    ((IComposite)component).CalculatePosition(0,0);
-                }                
+                //if(component is IComposite)
+                //{
+                //    ((IComposite)component).CalculatePosition(0,0);
+                //}
 
                 component.Draw(graphics);
             }
         }
-
-        //public override void Display(int depth)
-        //{
-        //    Console.WriteLine(new String('-', depth) + name);
-
-        //    // Recursively display child nodes
-
-        //    foreach (Component component in _children)
-        //    {
-        //        component.Display(depth + 2);
-        //    }
-        //}
 
         #endregion
 
@@ -107,16 +75,6 @@ namespace CompositeClassLibrary.CompositePattern
         public void Clear()
         {
             _children.Clear(); // TODO: loop nested composites.... ?!
-        }
-
-        public DateTime GetMaxDateTime()
-        {
-            throw new NotImplementedException();
-        }
-
-        public DateTime GetMinDateTime()
-        {
-            throw new NotImplementedException();
         }
 
         public void CalculatePosition(int width, int resolutionInPixels)

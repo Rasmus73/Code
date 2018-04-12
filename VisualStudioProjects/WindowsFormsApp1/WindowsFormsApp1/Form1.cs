@@ -40,10 +40,10 @@ namespace WindowsFormsApp1
             //compositeRoot.Add(composite2);
 
             Graphics formGraphics = this.CreateGraphics();
-            formGraphics.Clear(Color.BlueViolet);
+            formGraphics.Clear(this.BackColor);
 
 
-            CompositorFixedWidth compositor = new CompositorFixedWidth(this.Width-20);
+            CompositorSeparateLine compositor = new CompositorSeparateLine(this.Width);
             Composition composition = new Composition(compositor);
 
             composition.Add(new ComponentText("TEXT_1"));
@@ -67,6 +67,11 @@ namespace WindowsFormsApp1
             composition.Draw(formGraphics);
 
             formGraphics.Dispose();
+        }
+
+        private void Form1_Resize(object sender, EventArgs e)
+        {
+            button1_Click(sender, e);
         }
     }
 }

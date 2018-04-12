@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CompositeClassLibrary.CompositePattern
 {
     public class ComponentText : IComponent
     {
+        long YCoord { get; set; }
+
         public string Name { get; set; }
 
         public ComponentText(string name)
@@ -17,11 +15,6 @@ namespace CompositeClassLibrary.CompositePattern
         }
 
         public void Add(IComponent component)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Remove(IComponent component)
         {
             throw new NotImplementedException();
         }

@@ -1,10 +1,5 @@
 ﻿using CompositeClassLibrary.CompositePattern;
 using Model.ValueTypes;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CompositeClassLibrary.CompositorPattern
 {
@@ -15,6 +10,7 @@ namespace CompositeClassLibrary.CompositorPattern
         private Composite _composite;
         private long _offset;
         private long _res;
+        private const int LineHeight = 50;
 
         internal PositionCalculation(Composite composite)
         {
@@ -32,32 +28,37 @@ namespace CompositeClassLibrary.CompositorPattern
         }
 
         private long _y = 0;
-        private void SetPosition(IComponent component)
+        private void SetPosition(IComponent componentToPosition)
         {
-            Composite composite;
-            composite = component as Composite;
+            Composite compositeToPosition;
+            compositeToPosition = componentToPosition as Composite;
 
-            if (composite != null)
+            if (compositeToPosition != null)
             {
-                foreach (IComponent c in composite)
+                foreach (IComponent component in compositeToPosition)
                 {
-                    if (c is IComposite)
+                    if (component is IComposite)
                     {
-                        SetPosition(c);
+                        SetPosition(component);
                     }
 
-                    IIntervalComponent ic = c as IIntervalComponent;
+                    IIntervalComponent ic = component as IIntervalComponent;
                     if (ic != null && ic.Interval != null)
                     {
                         IntervalType i = ic.Interval;
                         i.XStart = (i.StartDateTime.Ticks - _offset) / _res;
                         i.XEnd = (i.EndDateTime.Value.Ticks - _offset) / _res; // TODO: null check
-                        i.Y = _y += 20;
+                        i.Y = _y += LineHeight;
+                    }
+
+                    IComposite composite = component as IComposite;
+                    if(composite != null)
+                    {
+                        composite.YCoord = _y += LineHeight;
                     }
                 }
             }
         }
-
 
         private long ResolutionUnit(int width)
         {

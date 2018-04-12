@@ -29,14 +29,7 @@ namespace CompositeClassLibrary
         {
             _compositor.Compose(_compositeRoot);
 
-            //components.ForEach(a => a.Draw(graphics));
             _compositeRoot.Draw(graphics);
         }
-
-        public void Remove(IComponent component)
-        {
-            throw new NotImplementedException();
-        }
-
     }
 }

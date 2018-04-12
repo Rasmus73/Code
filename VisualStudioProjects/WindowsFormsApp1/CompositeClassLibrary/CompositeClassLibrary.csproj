@@ -50,8 +50,9 @@
     <Compile Include="CompositePattern\Composite.cs" />
     <Compile Include="CompositePattern\ComponentText.cs" />
     <Compile Include="CompositePattern\IComponent.cs" />
+    <Compile Include="CompositorPattern\CompositorSameLine.cs" />
     <Compile Include="CompositorPattern\PositionCalculation.cs" />
-    <Compile Include="CompositorPattern\CompositorFixedWidth.cs" />
+    <Compile Include="CompositorPattern\CompositorSeparateLine.cs" />
     <Compile Include="CompositorPattern\Compositor.cs" />
     <Compile Include="Composition\Composition.cs" />
     <Compile Include="Composition\IComposition.cs" />
@@ -62,9 +63,6 @@
       <Project>{905e616b-aed2-4ead-9c21-c2d27907e2c1}</Project>
       <Name>Model</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="CompositeClassLibrary_ClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
