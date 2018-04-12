@@ -1,6 +1,7 @@
-﻿using CompositeClassLibrary.CompositePattern;
+﻿using IntervalDisplayLibrary.Components;
+using IntervalDisplayLibrary.Components.Interface;
 
-namespace CompositeClassLibrary.CompositorPattern
+namespace IntervalDisplayLibrary.Compositors
 {
     public class CompositorSeparateLine : Compositor
     {

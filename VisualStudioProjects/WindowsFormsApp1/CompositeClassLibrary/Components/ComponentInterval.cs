@@ -1,13 +1,14 @@
-﻿using Model.ValueTypes;
+﻿using IntervalDisplayLibrary.Components.Interface;
+using Model.ValueTypes;
 using System;
 
-namespace CompositeClassLibrary.CompositePattern
+namespace IntervalDisplayLibrary.Components
 {
-    public class ComponentAbsence : IntervalComponent, IComponent
+    public class ComponentInterval : IntervalComponent, IComponent
     {
         public string Name { get; set; }
 
-        public ComponentAbsence(string name, IntervalType interval)            
+        public ComponentInterval(string name, IntervalType interval)
             : base(name, interval)
         {
             Name = name;

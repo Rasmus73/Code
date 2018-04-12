@@ -1,9 +1,10 @@
-﻿using CompositeClassLibrary.CompositePattern;
-using CompositeClassLibrary.CompositorPattern;
+﻿using IntervalDisplayLibrary.Components;
+using IntervalDisplayLibrary.Components.Interface;
+using IntervalDisplayLibrary.Compositors;
 using System;
 using System.Drawing;
 
-namespace CompositeClassLibrary
+namespace IntervalDisplayLibrary.Composition
 {
     public class Composition : IComponent
     {

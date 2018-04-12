@@ -1,6 +1,6 @@
 ﻿using Model.ValueTypes;
 
-namespace CompositeClassLibrary.CompositePattern
+namespace IntervalDisplayLibrary.Components
 {
     internal interface IIntervalComponent
     {

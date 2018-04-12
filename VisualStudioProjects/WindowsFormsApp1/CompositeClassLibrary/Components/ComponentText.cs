@@ -1,7 +1,8 @@
-﻿using System;
+﻿using IntervalDisplayLibrary.Components.Interface;
+using System;
 using System.Drawing;
 
-namespace CompositeClassLibrary.CompositePattern
+namespace IntervalDisplayLibrary.Components
 {
     public class ComponentText : IComponent
     {

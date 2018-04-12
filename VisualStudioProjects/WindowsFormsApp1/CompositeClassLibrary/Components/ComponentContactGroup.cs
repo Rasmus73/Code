@@ -1,7 +1,8 @@
-﻿using Model.ValueTypes;
+﻿using IntervalDisplayLibrary.Components.Interface;
+using Model.ValueTypes;
 using System;
 
-namespace CompositeClassLibrary.CompositePattern
+namespace IntervalDisplayLibrary.Components
 {
     public class ComponentContactGroup : IntervalComponent, IComponent
     {

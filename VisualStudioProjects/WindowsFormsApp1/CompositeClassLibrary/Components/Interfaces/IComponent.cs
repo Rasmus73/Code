@@ -1,4 +1,4 @@
-﻿namespace CompositeClassLibrary.CompositePattern
+﻿namespace IntervalDisplayLibrary.Components.Interface
 {
     public interface IComponent
     {

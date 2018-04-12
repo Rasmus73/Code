@@ -2,7 +2,7 @@
 using System;
 using System.Drawing;
 
-namespace CompositeClassLibrary.CompositePattern
+namespace IntervalDisplayLibrary.Components
 {
     public abstract class IntervalComponent : IIntervalComponent
     {

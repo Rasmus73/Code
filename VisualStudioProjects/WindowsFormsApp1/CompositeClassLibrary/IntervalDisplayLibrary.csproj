@@ -41,19 +41,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CompositePattern\ComponentAbsence.cs" />
-    <Compile Include="CompositePattern\ComponentContactGroup.cs" />
-    <Compile Include="CompositePattern\IntervalComponent.cs" />
-    <Compile Include="CompositePattern\IIntervalComponent.cs" />
-    <Compile Include="CompositePattern\ComponentInterval.cs" />
-    <Compile Include="CompositePattern\IComposite.cs" />
-    <Compile Include="CompositePattern\Composite.cs" />
-    <Compile Include="CompositePattern\ComponentText.cs" />
-    <Compile Include="CompositePattern\IComponent.cs" />
-    <Compile Include="CompositorPattern\CompositorSameLine.cs" />
-    <Compile Include="CompositorPattern\PositionCalculation.cs" />
-    <Compile Include="CompositorPattern\CompositorSeparateLine.cs" />
-    <Compile Include="CompositorPattern\Compositor.cs" />
+    <Compile Include="Components\ComponentAbsence.cs" />
+    <Compile Include="Components\ComponentContactGroup.cs" />
+    <Compile Include="Components\IntervalComponent.cs" />
+    <Compile Include="Components\IIntervalComponent.cs" />
+    <Compile Include="Components\ComponentInterval.cs" />
+    <Compile Include="Components\Interfaces\IComposite.cs" />
+    <Compile Include="Components\Composite.cs" />
+    <Compile Include="Components\ComponentText.cs" />
+    <Compile Include="Components\Interfaces\IComponent.cs" />
+    <Compile Include="Compositors\CompositorSameLine.cs" />
+    <Compile Include="Compositors\PositionCalculation.cs" />
+    <Compile Include="Compositors\CompositorSeparateLine.cs" />
+    <Compile Include="Compositors\Compositor.cs" />
     <Compile Include="Composition\Composition.cs" />
     <Compile Include="Composition\IComposition.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -64,5 +64,6 @@
       <Name>Model</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,7 +1,8 @@
-﻿using CompositeClassLibrary.CompositePattern;
+﻿using IntervalDisplayLibrary.Components;
+using IntervalDisplayLibrary.Components.Interface;
 using Model.ValueTypes;
 
-namespace CompositeClassLibrary.CompositorPattern
+namespace IntervalDisplayLibrary.Compositors
 {
     internal class PositionCalculation
     {

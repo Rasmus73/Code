@@ -1,14 +1,9 @@
-﻿using CompositeClassLibrary;
-using CompositeClassLibrary.CompositePattern;
-using CompositeClassLibrary.CompositorPattern;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
+﻿using IntervalDisplayLibrary.Components;
+using IntervalDisplayLibrary.Composition;
+using IntervalDisplayLibrary.Compositors;
 using Model.ValueTypes;
+using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace WindowsFormsApp1
@@ -20,7 +15,17 @@ namespace WindowsFormsApp1
             InitializeComponent();           
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Form1_Resize(object sender, EventArgs e)
+        {
+            Init();
+        }
+
+        private void Form1_Paint(object sender, PaintEventArgs e)
+        {
+            Init();
+        }
+
+        private void Init()
         {
             //var compositeRoot = new Composite("composite1");
 
@@ -39,9 +44,6 @@ namespace WindowsFormsApp1
 
             //compositeRoot.Add(composite2);
 
-            Graphics formGraphics = this.CreateGraphics();
-            formGraphics.Clear(this.BackColor);
-
 
             CompositorSeparateLine compositor = new CompositorSeparateLine(this.Width);
             Composition composition = new Composition(compositor);
@@ -59,19 +61,15 @@ namespace WindowsFormsApp1
             composition.Add(new ComponentContactGroup("CG_A2", new IntervalType(DateTime.Now.AddDays(-12), DateTime.Now.AddDays(120), "TEST_COMMENT")));
             composition.Add(new ComponentAbsence("Abs2", new IntervalType(DateTime.Now.AddDays(-10), DateTime.Now.AddDays(10), "TEST_COMMENT")));
             composition.Add(new ComponentContactGroup("CG_C", new IntervalType(DateTime.Now.AddDays(-10), DateTime.Now.AddDays(10), "TEST_COMMENT")));
+            
 
-            //composition.Add(compositeRoot);
-
-            //composition.Compositor_Compose(this.Width);
+            Graphics formGraphics = this.CreateGraphics();
+            formGraphics.Clear(this.BackColor);
 
             composition.Draw(formGraphics);
 
             formGraphics.Dispose();
         }
 
-        private void Form1_Resize(object sender, EventArgs e)
-        {
-            button1_Click(sender, e);
-        }
     }
 }

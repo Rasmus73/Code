@@ -1,8 +1,9 @@
-﻿using System.Collections;
+﻿using IntervalDisplayLibrary.Components.Interface;
+using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
 
-namespace CompositeClassLibrary.CompositePattern
+namespace IntervalDisplayLibrary.Components
 {
     internal class Composite : IComponent, IComposite, IEnumerable<IComponent>
     {
