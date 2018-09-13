@@ -1,8 +1,0 @@
-INDEX VERSION 1.126+C:\Android\Source\Snake\.metadata\.plugins\org.eclipse.jdt.core
-3938806134.index
-376209004.index
-3673444564.index
-1061179634.index
-3608508120.index
-3570043952.index
-3286698985.index

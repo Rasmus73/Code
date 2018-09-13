@@ -1,0 +1,11 @@
+c:\users\dfdg_rba\documents\visual studio 2015\Projects\WindowsFormsApplication1\ClassLibrary\bin\Debug\ClassLibrary.dll
+c:\users\dfdg_rba\documents\visual studio 2015\Projects\WindowsFormsApplication1\ClassLibrary\bin\Debug\ClassLibrary.pdb
+c:\users\dfdg_rba\documents\visual studio 2015\Projects\WindowsFormsApplication1\ClassLibrary\obj\Debug\ClassLibrary.csprojResolveAssemblyReference.cache
+c:\users\dfdg_rba\documents\visual studio 2015\Projects\WindowsFormsApplication1\ClassLibrary\obj\Debug\ClassLibrary.dll
+c:\users\dfdg_rba\documents\visual studio 2015\Projects\WindowsFormsApplication1\ClassLibrary\obj\Debug\ClassLibrary.pdb
+C:\Code\Projects\WindowsFormsApplication1\ClassLibrary\bin\Debug\ClassLibrary.dll
+C:\Code\Projects\WindowsFormsApplication1\ClassLibrary\bin\Debug\ClassLibrary.pdb
+C:\Code\Projects\WindowsFormsApplication1\ClassLibrary\obj\Debug\ClassLibrary.csprojResolveAssemblyReference.cache
+C:\Code\Projects\WindowsFormsApplication1\ClassLibrary\obj\Debug\ClassLibrary.dll
+C:\Code\Projects\WindowsFormsApplication1\ClassLibrary\obj\Debug\ClassLibrary.pdb
+C:\Code\Projects\WindowsFormsApplication1\ClassLibrary\obj\Debug\ClassLibrary.csproj.CoreCompileInputs.cache

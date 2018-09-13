@@ -1,3 +1,0 @@
-INDEX VERSION 1.126+C:\Android\Source\SnakeTest\.metadata\.plugins\org.eclipse.jdt.core
-3608508120.index
-3570043952.index

@@ -4,7 +4,7 @@ using IntervalDisplayLibrary.Compositors;
 using System;
 using System.Drawing;
 
-namespace IntervalDisplayLibrary.Composition
+namespace IntervalDisplayLibrary.Composition // Move to components namespace?
 {
     public class Composition : IComponent
     {
